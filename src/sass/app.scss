@@ -1,0 +1,41 @@
+.asu-widget-poll {
+  @import './global.scss';
+
+  $widget-max-width: 400px;
+
+  box-sizing: border-box;
+  font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 1.6rem;
+  min-height: 300px;
+  max-width: $widget-max-width;
+  text-align: left;
+
+  .poll-question {
+    background: #98043F;
+    color: #fff;
+    height: 100%;
+    padding: 20px;
+
+    label {
+      display: block;
+      font-size: 2em;
+      line-height: 1em;
+      margin-bottom: 0.75em;
+    }
+  }
+
+  .poll-chart {
+    padding: 20px 0 10px;
+  }
+
+  .chart-overlay {
+    position: absolute;
+    text-align: center;
+    max-width: $widget-max-width;
+    width: 100%;
+  }
+
+  .note {
+    font-size: 0.8em;
+  }
+}
