@@ -1,3 +1,11 @@
+var webpack = require('webpack'),
+  minify = process.argv.indexOf('--minify') !== -1,
+  plugins = [];
+
+if (minify) {
+  plugins.push(new webpack.optimize.UglifyJsPlugin({ compress: { warnings: false } }))
+}
+
 module.exports = {
   entry: [
     './src/index.jsx'
@@ -23,6 +31,7 @@ module.exports = {
   resolve: {
     extensions: ['', '.js', '.jsx']
   },
+  plugins: plugins,
   devServer: {
     historyApiFallback: true,
     contentBase: './'
